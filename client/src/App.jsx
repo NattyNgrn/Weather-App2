@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Search from './components/search';
+import getWeather from './serverfuncs';
 
 function App() {
 
-
+  useEffect(() => {
+    getWeather("newyorkcity").then(result=> console.log(result));
+  }, [])
   
+
   const [weather, setWeather] = useState({});
 
   return (
@@ -26,7 +30,7 @@ function App() {
                     <div class="p-6">
                         <h5
                             class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            City: {weather.city.name}
+                            City: {weather.city}
                         </h5>
                         <h5
                             class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">

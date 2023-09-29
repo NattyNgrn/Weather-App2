@@ -1,5 +1,5 @@
 
-const API = 'http://localhost:2020/weather/'
+const API = 'http://localhost:2020/weather'
 
 
 async function getWeather(city) {
