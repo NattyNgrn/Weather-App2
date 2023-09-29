@@ -42,7 +42,7 @@ function App() {
                         </h5>
                         <h5
                             class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Min Temperature: {weather.list[0].temp.max}
+                            Min Temperature: {weather.list[0].temp.min}
                         </h5>
                         <h5
                             class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
