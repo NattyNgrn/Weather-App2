@@ -25,8 +25,8 @@ app.get("/", (req, res) => {
     res.send("hello");
 });
 
-app.get("/weather", (req, res) => {
-    const city = req.query.city;
+app.get("/weather/:city", (req, res) => {
+    const city = req.params.city;
     const units = "imperial";
     const URL = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=7&appid=${API}&units=${units}`
     getWeather(URL).then(result => res.send(result));
