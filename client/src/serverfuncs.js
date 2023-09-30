@@ -9,6 +9,4 @@ async function getWeather(city) {
     return weatherData;
 }
 
-getWeather();
-
 export default getWeather;
